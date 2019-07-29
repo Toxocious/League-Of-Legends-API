@@ -30,7 +30,7 @@
 		</div>
 
 		<img src='assets/images/profile/<?= $Summoner_Data[0]['profileIconId']; ?>.png' />
-		
+
 		<div class='profile-level'>
 			<div>
 				<?= number_format($Summoner_Data[0]['summonerLevel']); ?>
@@ -61,12 +61,50 @@
 				
 					$Match_Region = $Summoner->FetchRegion($Summoner_Region);
 					$Match_Data = $Summoner->FetchMatch($Match_ID, $Match_Region[1]);
+
+					$Summoner_Player_ID = $Match_Data['Players'][1][0]['Player_ID'];
+					$Summoner_Team_ID = $Match_Data['Players'][1][0]['Team_ID'];
+					$Summoner_Champion_ID = $Match_Data['Players'][1][0]['Champion_ID'];
+					$Summoner_Spell_1 = $Match_Data['Players'][$Summoner_Player_ID][0]['Summoner_Spell_1'];
+					$Summoner_Spell_2 = $Match_Data['Players'][$Summoner_Player_ID][0]['Summoner_Spell_2'];
+					
+					$Champion_Data = $Summoner->FetchChampion( $Match_Val['champion'] );
+					$Summoner_Spell_Data_1 = $Summoner->FetchSummonerSpell($Summoner_Spell_1);
+					$Summoner_Spell_Data_2 = $Summoner->FetchSummonerSpell($Summoner_Spell_2);
+
+					//echo "<pre>";
+					//var_dump($Match_Data);
+					//var_dump($Summoner_Spell_Data_1);
+					//echo "</pre>";
 				
 					echo "
 						<div class='match'>
-							<div class='match-head'>
-								Game Mode - Game Duration
+							<div class='match-icons'>
+								<div class='match-icon'>
+									<img src='{$Champion_Data['src']}' />
+								</div>
+
+								<div class='match-icon' style='height: 40px; margin: -100px 0px 0px 100px; position: absolute; width: 40px;'>
+									<img src='assets/images/spell/{$Summoner_Spell_Data_1['image']['full']}' style='height: 40px; width: 40px;' />
+								</div>
+									
+									<div class='match-icon' style='height: 40px; margin: -49px 0px 0px 100px; position: absolute; width: 40px;'>
+										<img src='assets/images/spell/{$Summoner_Spell_Data_2['image']['full']}' style='height: 40px; width: 40px;' />
+								</div>
 							</div>
+
+							<b>Win Or Lose:</b> {$Match_Data['Teams'][$Match_Data['Players'][$Summoner_Player_ID][0]['Team_ID']]['WinOrLose']}<br />
+							<b>Match Date:</b> {$Match_Data['Match_Creation_Date']}<br />
+							<b>Match Duration:</b> {$Match_Data['Match_Length']}<br />
+							<b>Map ID:</b> {$Match_Data['Map_ID']}<br />
+							<b>Queue ID:</b> {$Match_Data['Queue_ID']}<br />
+							<b>Season ID:</b> {$Match_Data['Season_ID']}<br />
+							<b>Player ID:</b> {$Match_Data['Players'][$Summoner_Player_ID][0]['Player_ID']}<br />
+							<b>Team ID:</b> {$Match_Data['Players'][$Summoner_Player_ID][0]['Team_ID']}<br />
+							<b>Champion ID:</b> {$Match_Data['Players'][$Summoner_Player_ID][0]['Champion_ID']}<br />
+							<b>Summoner Spell #1:</b> {$Match_Data['Players'][$Summoner_Player_ID][0]['Summoner_Spell_1']}<br />
+							<b>Summoner Spell #2:</b> {$Match_Data['Players'][$Summoner_Player_ID][0]['Summoner_Spell_2']}<br />
+
 						</div>
 					";
 				}

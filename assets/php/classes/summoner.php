@@ -2,7 +2,7 @@
 	Class Summoner
 	{
 		/**
-		 * Fetch a Summoner's LoL data.
+		 * Fetch a Summoner's data.
 		 * @param string $Name
 		 * @param string $Region
 		 */
@@ -84,7 +84,7 @@
 			$Match['Teams'] = [];
 			foreach ( $Fetch_Match['teams'] as $Team_Key => $Team_Val )
 			{
-				$Match['Teams'][] = [
+				$Match['Teams'][$Team_Val['teamId']] = [
 					'Team_ID' => $Team_Val['teamId'],
 					'WinOrLose' => $Team_Val['win'],
 					'First_Blood' => $Team_Val['firstBlood'],
@@ -108,7 +108,7 @@
 			foreach ( $Fetch_Match['participants'] as $Player_Key => $Player_Val )
 			{
 				// Fetch general data of the player.
-				$Match['Players'][] = [
+				$Match['Players'][$Player_Val['participantId']][] = [
 					'Player_ID' => $Player_Val['participantId'],
 					'Team_ID' => $Player_Val['teamId'],
 					'Champion_ID' => $Player_Val['championId'],
@@ -118,9 +118,14 @@
 				];
 				
 				// Fetch the player's stats from the match.
-				$Match['Players']['Stats'] = [];
+				$Match['Players'][$Player_Val['participantId']]['Stats'] = [];
 				foreach ( $Player_Val['stats'] as $Stat_Key => $Stat_Val )
 				{
+					$Match['Players'][$Player_Val['participantId']]['Stats'] += [
+						$Stat_Key => $Stat_Val
+					];
+
+					/*
 					$Match['Players']['Stats'][] = [
 						'WinOrLose' => $Stat_Val['win'],
 						'Item_1' => $Stat_Val['item0'],
@@ -219,10 +224,10 @@
 						'Perk_5_Var_2' => $Stat_Val['perk5Var2'],
 						'Perk_5_Var_3' => $Stat_Val['perk5Var3'],
 					];
+					*/
 				}
 			}
 
-			$Match = 'tset';
 			return $Match;
 		}
 
@@ -244,7 +249,7 @@
 				$Match_Count = 1;
 			}
 
-			$API_URL = "https://{$Region}/lol/match/v4/matchlists/by-account/{$Account_ID}?endIndex={$Match_Count}&beginIndex=1&api_key={$API_Key}";
+			$API_URL = "https://{$Region}/lol/match/v4/matchlists/by-account/{$Account_ID}?endIndex={$Match_Count}&beginIndex=0&api_key={$API_Key}";
 
 			// Fetch the necessary JSON from the Riot API in regards to the Summoner's match history data.
 			$Fetch_Match_Data = curl_init();
@@ -354,5 +359,44 @@
 			}
 
 			return $Champions[$ID];
+		}
+
+		/**
+		 * Given the specific ID of a spell, fetch a complete list of it's data.
+		 * @param int $ID
+		 */
+		public function FetchSummonerSpell($ID)
+		{
+			$Spell_ID = null;
+
+			$Summoner_Spell_File = file_get_contents('../../js/summonerspells.json');
+			$Summoner_Spell_JSON = json_decode($Summoner_Spell_File, true);
+
+			$Summoner_Spells = [];
+			foreach ( $Summoner_Spell_JSON['data'] as $Sum_Spell_Key => $Sum_Spell_Val )
+			{
+				if ( $Sum_Spell_Val['key'] == $ID )
+				{
+					$Spell_ID = $Sum_Spell_Val['id'];
+				}
+
+				if ( is_array($Sum_Spell_Key) )
+				{
+					foreach ( $Sum_Spell_Key as $Sum_Spell_Sub_Key => $Sum_Spell_Sub_Val )
+					{
+						$Summoner_Spells[$Sum_Spell_Val['key']] = [
+							"{$Sum_Spell_Sub_Key}" => $Sum_Spell_Sub_Val
+						];
+					}
+				}
+				else
+				{
+					$Summoner_Spells[$Sum_Spell_Val['key']] = [
+						"{$Sum_Spell_Key}" => $Sum_Spell_Val
+					];
+				}
+			}
+
+			return $Summoner_Spells[$ID][$Spell_ID];
 		}
 	}

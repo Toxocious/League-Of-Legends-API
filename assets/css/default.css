@@ -742,6 +742,11 @@ button:hover
     padding: 5px;
   }
 
+  .container > .content > .profile-container > .profile-content > #match-history > .match:not(:last-child)
+  {
+    margin-bottom: 10px;
+  }
+
   .container > .content > .profile-container > .profile-content > #champion-mastery
   {
     padding-top: 20px;
@@ -755,7 +760,8 @@ button:hover
     width: 120px;
   }
 
-  .container > .content > .profile-container > .profile-content > #champion-mastery > .champion-content > .champion-icon
+  .container > .content > .profile-container > .profile-content > #champion-mastery > .champion-content > .champion-icon,
+  .container > .content > .profile-container > .profile-content > #match-history > .match > .match-icons > .match-icon
   {
     background: linear-gradient(180deg, #ecc572 0, #815500);
     border-radius: 50%;
@@ -764,7 +770,8 @@ button:hover
     width: 100px;
   }
 
-  .container > .content > .profile-container > .profile-content > #champion-mastery > .champion-content > .champion-icon > img
+  .container > .content > .profile-container > .profile-content > #champion-mastery > .champion-content > .champion-icon > img,
+  .container > .content > .profile-container > .profile-content > #match-history > .match > .match-icons > .match-icon > img
   {
     border-radius: 50%;
     height: 100px;
