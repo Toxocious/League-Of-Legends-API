@@ -742,9 +742,14 @@ button:hover
     padding: 5px;
   }
 
+  .container > .content > .profile-container > .profile-content > #match-history > .match
+  {
+    padding: 5px 0px;
+  }
+
   .container > .content > .profile-container > .profile-content > #match-history > .match:not(:last-child)
   {
-    margin-bottom: 10px;
+    border-bottom: 2px solid #7e633b;
   }
 
   .container > .content > .profile-container > .profile-content > #champion-mastery

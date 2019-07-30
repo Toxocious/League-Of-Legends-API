@@ -67,44 +67,114 @@
 					$Summoner_Champion_ID = $Match_Data['Players'][1][0]['Champion_ID'];
 					$Summoner_Spell_1 = $Match_Data['Players'][$Summoner_Player_ID][0]['Summoner_Spell_1'];
 					$Summoner_Spell_2 = $Match_Data['Players'][$Summoner_Player_ID][0]['Summoner_Spell_2'];
+					$Summoner_WinOrLose = $Match_Data['Teams'][$Match_Data['Players'][$Summoner_Player_ID][0]['Team_ID']]['WinOrLose'];
 					
 					$Champion_Data = $Summoner->FetchChampion( $Match_Val['champion'] );
 					$Summoner_Spell_Data_1 = $Summoner->FetchSummonerSpell($Summoner_Spell_1);
 					$Summoner_Spell_Data_2 = $Summoner->FetchSummonerSpell($Summoner_Spell_2);
 
-					//echo "<pre>";
-					//var_dump($Match_Data);
-					//var_dump($Summoner_Spell_Data_1);
-					//echo "</pre>";
+					/**
+					 * An array of the items that the user bought during the match.
+					 */
+					$Summoner_Item_Data = [
+						$Match_Data['Players'][$Summoner_Player_ID]['Stats']['item0'],
+						$Match_Data['Players'][$Summoner_Player_ID]['Stats']['item1'],
+						$Match_Data['Players'][$Summoner_Player_ID]['Stats']['item2'],
+						$Match_Data['Players'][$Summoner_Player_ID]['Stats']['item3'],
+						$Match_Data['Players'][$Summoner_Player_ID]['Stats']['item4'],
+						$Match_Data['Players'][$Summoner_Player_ID]['Stats']['item5'],
+						$Match_Data['Players'][$Summoner_Player_ID]['Stats']['item6'],
+					];
+
+					/**
+					 * Loop through the Summoner's items.
+					 * If the Item == 0, they didn't buy an item, and we're going to force a blank image ID on it.
+					 */
+					$Item_Inc = 0;
+					foreach ( $Summoner_Item_Data as $Item )
+					{
+						if ( $Item == 0 )
+						{
+							$Summoner_Item_Data[$Item_Inc] = '3637';
+						}
+
+						$Item_Inc++;
+					}
+
+					/**
+					 * Determine if the user won or lost.
+					 * We're going to use this to style the element.
+					 */
+					switch ( $Summoner_WinOrLose )
+					{
+						case 'Win':
+							$BG_Color = '#001900';
+							break;
+
+						case 'Fail':
+							$BG_Color = '#190000';
+							break;
+					}
 				
+					/**
+					 * Display the requested matches.
+					 */
 					echo "
-						<div class='match'>
+						<div class='match' style='background-color: {$BG_Color};'>
 							<div class='match-icons'>
+								<!-- Champion Icon -->
 								<div class='match-icon'>
 									<img src='{$Champion_Data['src']}' />
 								</div>
 
-								<div class='match-icon' style='height: 40px; margin: -100px 0px 0px 100px; position: absolute; width: 40px;'>
+								<!-- Summoner Spell Icons -->
+								<div class='match-icon' style='height: 40px; margin: -100px 0px 0px 80px; position: absolute; width: 40px;'>
 									<img src='assets/images/spell/{$Summoner_Spell_Data_1['image']['full']}' style='height: 40px; width: 40px;' />
 								</div>
 									
-									<div class='match-icon' style='height: 40px; margin: -49px 0px 0px 100px; position: absolute; width: 40px;'>
+									<div class='match-icon' style='height: 40px; margin: -49px 0px 0px 80px; position: absolute; width: 40px;'>
 										<img src='assets/images/spell/{$Summoner_Spell_Data_2['image']['full']}' style='height: 40px; width: 40px;' />
 								</div>
+
+								<!-- Item Icons -->
+								<div class='match-icon' style='height: 40px; margin: -100px 0px 0px 395px; position: absolute; width: 40px;'>
+									<img src='assets/images/item/{$Summoner_Item_Data[0]}.png' style='height: 40px; width: 40px;' />
+								</div>
+									
+								<div class='match-icon' style='height: 40px; margin: -49px 0px 0px 395px; position: absolute; width: 40px;'>
+									<img src='assets/images/item/{$Summoner_Item_Data[3]}.png' style='height: 40px; width: 40px;' />
+								</div>
+
+								<div class='match-icon' style='height: 40px; margin: -100px 0px 0px 445px; position: absolute; width: 40px;'>
+									<img src='assets/images/item/{$Summoner_Item_Data[1]}.png' style='height: 40px; width: 40px;' />
+								</div>
+									
+								<div class='match-icon' style='height: 40px; margin: -49px 0px 0px 445px; position: absolute; width: 40px;'>
+									<img src='assets/images/item/{$Summoner_Item_Data[4]}.png' style='height: 40px; width: 40px;' />
+								</div>
+
+								<div class='match-icon' style='height: 40px; margin: -100px 0px 0px 495px; position: absolute; width: 40px;'>
+									<img src='assets/images/item/{$Summoner_Item_Data[2]}.png' style='height: 40px; width: 40px;' />
+								</div>
+									
+								<div class='match-icon' style='height: 40px; margin: -49px 0px 0px 495px; position: absolute; width: 40px;'>
+									<img src='assets/images/item/{$Summoner_Item_Data[5]}.png' style='height: 40px; width: 40px;' />
+								</div>
+
+								<div class='match-icon' style='height: 40px; margin: -72px 0px 0px 545px; position: absolute; width: 40px;'>
+									<img src='assets/images/item/{$Summoner_Item_Data[6]}.png' style='height: 40px; width: 40px;' />
+								</div>		
 							</div>
 
-							<b>Win Or Lose:</b> {$Match_Data['Teams'][$Match_Data['Players'][$Summoner_Player_ID][0]['Team_ID']]['WinOrLose']}<br />
-							<b>Match Date:</b> {$Match_Data['Match_Creation_Date']}<br />
-							<b>Match Duration:</b> {$Match_Data['Match_Length']}<br />
-							<b>Map ID:</b> {$Match_Data['Map_ID']}<br />
-							<b>Queue ID:</b> {$Match_Data['Queue_ID']}<br />
-							<b>Season ID:</b> {$Match_Data['Season_ID']}<br />
-							<b>Player ID:</b> {$Match_Data['Players'][$Summoner_Player_ID][0]['Player_ID']}<br />
-							<b>Team ID:</b> {$Match_Data['Players'][$Summoner_Player_ID][0]['Team_ID']}<br />
-							<b>Champion ID:</b> {$Match_Data['Players'][$Summoner_Player_ID][0]['Champion_ID']}<br />
-							<b>Summoner Spell #1:</b> {$Match_Data['Players'][$Summoner_Player_ID][0]['Summoner_Spell_1']}<br />
-							<b>Summoner Spell #2:</b> {$Match_Data['Players'][$Summoner_Player_ID][0]['Summoner_Spell_2']}<br />
+							<div style='margin: -70px 0px 0px 150px; position: absolute; text-align: center;'>
+								<b>KDA</b><br />
+								{$Match_Data['Players'][$Summoner_Player_ID]['Stats']['kills']}/{$Match_Data['Players'][$Summoner_Player_ID]['Stats']['deaths']}/{$Match_Data['Players'][$Summoner_Player_ID]['Stats']['assists']}
+							</div>
 
+							<div style='margin: -70px 0px 0px 250px; position: absolute; text-align: center;'>
+								<b>Gold Earned</b><br />
+								" . number_format($Match_Data['Players'][$Summoner_Player_ID]['Stats']['goldEarned']) . "
+							</div>
 						</div>
 					";
 				}
