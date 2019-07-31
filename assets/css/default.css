@@ -59,1218 +59,329 @@ button:hover
 }
 
 /**
- * Smallest Resolution Devices
- * Maximum width of 575px.
+ * Default styling happens here.
  */
-@media ( max-width: 575.98px )
+.container > .bg-init
 {
-  .container > .bg-init
-  {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -100;
-  }
-
-  .container > .bg-init:before
-  {
-    content: "";
-    background: url('../images/backgrounds/bg3.jpg') top;
-    background-size: cover;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: .25;
-    filter: blur(8px);
-  }
-  .container > .bg-init:after
-  {
-    content: "";
-    background: url('../images/backgrounds/bg3.jpg') top;
-    background-size: cover;
-    display: block;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-
-  .container > .notice
-  {
-    background: linear-gradient(180deg, #F51C1A 0, #9E0707);
-    border: none;
-    top: 10px;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.11);
-    color: #937341;
-
-    left: 50%;
-    transform: translateX(-50%);
-
-    line-height: 1;
-    padding: 10px 5px;
-    position: absolute;
-
-    text-align: center;
-    text-transform: uppercase;
-    width: 500px;
-    z-index: 1;
-  }
-
-  .container > .notice:before
-  {
-    top: 2px;
-    left: 2px;
-    right: 2px;
-    bottom: 2px;
-    content: "";
-    display: block;
-    position: absolute;
-    background: #111;
-    z-index: -1;
-  }
-
-  .container > .content
-  {
-    color: #d5b26e;
-  }
-
-  .container > .content > .main-form
-  {
-    left: 50%;
-    top: 50%; 
-    margin-left: -282px;
-    margin-top: -72px;
-    position: absolute;
-
-    height: 144px;
-    width: 564px;
-  }
-
-  .container > .content > .main-form > input
-  {
-    background: transparent;
-    border: 0 solid #7e633b;
-    border-bottom-width: 1px;
-    color: #c4b998;
-    font-size: 3rem;
-    font-weight: 400;
-    text-align: center;
-    width: 420px;
-  }
-
-  .container > .content > .main-form > select
-  {
-    background: transparent;
-    border: 0 solid #7e633b;
-    border-bottom-width: 1px;
-    color: #c4b998;
-    font-size: 3rem;
-    font-weight: 400;
-    outline: none;
-    width: 140px;
-  }
-
-  .container > .content > .main-form > select > option
-  {
-    background: #111;
-    border: 1px solid #7e633b;
-    outline: none;
-  }
-
-  .container > .content > .main-form > button
-  {
-    width: 100%;
-  }
-
-  .container > .content > .profile-banner
-  {
-    /*border: 2px solid #937341;*/
-    margin: 0 auto;
-    padding: 10px;
-    width: 204px;
-  }
-
-  .container > .content > .profile-banner > .profile-icon
-  {
-    background: linear-gradient(180deg, #ecc572 0, #815500);
-    border-radius: 50%;
-    height: 200px;
-    padding: 2px;
-    width: 200px;
-  }
-
-  .container > .content > .profile-banner > .profile-icon > img
-  {
-    border-radius: 50%;
-    height: 200px;
-    width: 200px;
-  }
-
-  .container > .content > .profile-banner > .profile-icon > .profile-name
-  {
-    background: linear-gradient(180deg, #ecc572 0, #815500);
-    border-radius: 6px;
-    margin-left: 30px;
-    margin-top: -5px;
-    padding: 2px;
-    position: absolute;
-    width: 135px;
-    z-index: 100000;
-  }
-
-  .container > .content > .profile-banner > .profile-icon > .profile-name > div
-  {
-    background: #111;
-    border-radius: 6px;
-    padding: 5px;
-    text-align: center;
-    width: 125px;
-  }
-
-  .container > .content > .profile-banner > .profile-icon > .profile-level
-  {
-    background: linear-gradient(180deg, #ecc572 0, #815500);
-    border-radius: 6px;
-    margin-left: 75px;
-    margin-top: -25px;
-    padding: 2px;
-    position: absolute;
-    width: 45px;
-    z-index: 100000;
-  }
-
-  .container > .content > .profile-banner > .profile-icon > .profile-level > div
-  {
-    background: #111;
-    border-radius: 6px;
-    padding: 5px;
-    text-align: center;
-    width: 35px;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
 }
 
-/**
- * Small Resolution Devices
- * Minimum width of 576px
- */
-@media ( min-width: 576px ) and ( max-width: 767.98px )
+.container > .bg-init:before
 {
-  .container > .bg-init
-  {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -100;
-  }
-
-  .container > .bg-init:before
-  {
-    content: "";
-    background: url('../images/backgrounds/bg3.jpg') top;
-    background-size: cover;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: .25;
-    filter: blur(8px);
-  }
-  .container > .bg-init:after
-  {
-    content: "";
-    background: url('../images/backgrounds/bg3.jpg') top;
-    background-size: cover;
-    display: block;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-
-  .container > .notice
-  {
-    background: linear-gradient(180deg, #F51C1A 0, #9E0707);
-    border: none;
-    top: 10px;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.11);
-    color: #937341;
-
-    left: 50%;
-    transform: translateX(-50%);
-
-    line-height: 1;
-    padding: 10px 5px;
-    position: absolute;
-
-    text-align: center;
-    text-transform: uppercase;
-    width: 500px;
-    z-index: 1;
-  }
-
-  .container > .notice:before
-  {
-    top: 2px;
-    left: 2px;
-    right: 2px;
-    bottom: 2px;
-    content: "";
-    display: block;
-    position: absolute;
-    background: #111;
-    z-index: -1;
-  }
-
-  .container > .content
-  {
-    color: #d5b26e;
-  }
-
-  .container > .content > .main-form
-  {
-    left: 50%;
-    top: 50%; 
-    margin-left: -282px;
-    margin-top: -72px;
-    position: absolute;
-
-    height: 144px;
-    width: 564px;
-  }
-
-  .container > .content > .main-form > input
-  {
-    background: transparent;
-    border: 0 solid #7e633b;
-    border-bottom-width: 1px;
-    color: #c4b998;
-    font-size: 3rem;
-    font-weight: 400;
-    text-align: center;
-    width: 420px;
-  }
-
-  .container > .content > .main-form > select
-  {
-    background: transparent;
-    border: 0 solid #7e633b;
-    border-bottom-width: 1px;
-    color: #c4b998;
-    font-size: 3rem;
-    font-weight: 400;
-    outline: none;
-    width: 140px;
-  }
-
-  .container > .content > .main-form > select > option
-  {
-    background: #111;
-    border: 1px solid #7e633b;
-    outline: none;
-  }
-
-  .container > .content > .main-form > button
-  {
-    width: 100%;
-  }
-
-  .container > .content > .profile-banner
-  {
-    /*border: 2px solid #937341;*/
-    margin: 0 auto;
-    padding: 10px;
-    width: 204px;
-  }
-
-  .container > .content > .profile-banner > .profile-icon
-  {
-    background: linear-gradient(180deg, #ecc572 0, #815500);
-    border-radius: 50%;
-    height: 200px;
-    padding: 2px;
-    width: 200px;
-  }
-
-  .container > .content > .profile-banner > .profile-icon > img
-  {
-    border-radius: 50%;
-    height: 200px;
-    width: 200px;
-  }
-
-  .container > .content > .profile-banner > .profile-icon > .profile-name
-  {
-    background: linear-gradient(180deg, #ecc572 0, #815500);
-    border-radius: 6px;
-    margin-left: 30px;
-    margin-top: -5px;
-    padding: 2px;
-    position: absolute;
-    width: 135px;
-    z-index: 100000;
-  }
-
-  .container > .content > .profile-banner > .profile-icon > .profile-name > div
-  {
-    background: #111;
-    border-radius: 6px;
-    padding: 5px;
-    text-align: center;
-    width: 125px;
-  }
-
-  .container > .content > .profile-banner > .profile-icon > .profile-level
-  {
-    background: linear-gradient(180deg, #ecc572 0, #815500);
-    border-radius: 6px;
-    margin-left: 75px;
-    margin-top: -25px;
-    padding: 2px;
-    position: absolute;
-    width: 45px;
-    z-index: 100000;
-  }
-
-  .container > .content > .profile-banner > .profile-icon > .profile-level > div
-  {
-    background: #111;
-    border-radius: 6px;
-    padding: 5px;
-    text-align: center;
-    width: 35px;
-  }
-
-  .container > .content > .profile-nav
-  {
-    height: 31px;
-    margin: 20px auto 0px;
-    width: 540px;
-  }
-
-  .container > .content > .profile-nav > .profile-nav-item
-  {
-    float: left;
-    padding: 5px;
-    text-align: center;
-    width: 135px;
-  }
-
-  .container > .content > .profile-nav > .profile-nav-item:hover
-  {
-    cursor: pointer;
-    font-weight: bold;
-    text-shadow: 1px 1px 10px #d5b26e, 1px 1px 10px #d5b26e;
-    transition: text-shadow 0.3s ease;
-  }
-
-  .container > .content > .profile-nav > .profile-nav-item.active
-  {
-    color: #ecc572;
-    text-shadow: 1px 1px 10px #d5b26e, 1px 1px 10px #d5b26e;
-  }
-
-  .container > .content > .profile-container
-  {
-    background: linear-gradient(180deg, #ecc572 0, #815500);
-    border-radius: 6px;
-    padding: 2px;
-    margin: 0 auto;
-    width: 540px;
-  }
-
-  .container > .content > .profile-container > .profile-content
-  {
-    background: #111;
-    border-radius: 6px;
-    padding: 5px;
-  }
+  content: "";
+  background: url('../images/backgrounds/bg3.jpg') top;
+  background-size: cover;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: .25;
+  filter: blur(8px);
+}
+.container > .bg-init:after
+{
+  content: "";
+  background: url('../images/backgrounds/bg3.jpg') top;
+  background-size: cover;
+  display: block;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
-/**
- * Medium Resolution Devices
- * Minimum width of 768px
- */
-@media ( min-width: 768px ) and ( max-width: 991.98px )
+.container > .notice
 {
-  .container > .bg-init
-  {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -100;
-  }
+  background: linear-gradient(180deg, #F51C1A 0, #9E0707);
+  border: none;
+  top: 10px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.11);
+  color: #937341;
 
-  .container > .bg-init:before
-  {
-    content: "";
-    background: url('../images/backgrounds/bg3.jpg') top;
-    background-size: cover;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: .25;
-    filter: blur(8px);
-  }
-  .container > .bg-init:after
-  {
-    content: "";
-    background: url('../images/backgrounds/bg3.jpg') top;
-    background-size: cover;
-    display: block;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
+  left: 50%;
+  transform: translateX(-50%);
 
-  .container > .notice
-  {
-    background: linear-gradient(180deg, #F51C1A 0, #9E0707);
-    border: none;
-    top: 10px;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.11);
-    color: #937341;
+  line-height: 1;
+  padding: 10px 5px;
+  position: absolute;
 
-    left: 50%;
-    transform: translateX(-50%);
-
-    line-height: 1;
-    padding: 10px 5px;
-    position: absolute;
-
-    text-align: center;
-    text-transform: uppercase;
-    width: 500px;
-    z-index: 1;
-  }
-
-  .container > .notice:before
-  {
-    top: 2px;
-    left: 2px;
-    right: 2px;
-    bottom: 2px;
-    content: "";
-    display: block;
-    position: absolute;
-    background: #111;
-    z-index: -1;
-  }
-
-  .container > .content
-  {
-    color: #d5b26e;
-  }
-
-  .container > .content > .main-form
-  {
-    left: 50%;
-    top: 50%; 
-    margin-left: -282px;
-    margin-top: -72px;
-    position: absolute;
-
-    height: 144px;
-    width: 564px;
-  }
-
-  .container > .content > .main-form > input
-  {
-    background: transparent;
-    border: 0 solid #7e633b;
-    border-bottom-width: 1px;
-    color: #c4b998;
-    font-size: 3rem;
-    font-weight: 400;
-    text-align: center;
-    width: 420px;
-  }
-
-  .container > .content > .main-form > select
-  {
-    background: transparent;
-    border: 0 solid #7e633b;
-    border-bottom-width: 1px;
-    color: #c4b998;
-    font-size: 3rem;
-    font-weight: 400;
-    outline: none;
-    width: 140px;
-  }
-
-  .container > .content > .main-form > select > option
-  {
-    background: #111;
-    border: 1px solid #7e633b;
-    outline: none;
-  }
-
-  .container > .content > .main-form > button
-  {
-    width: 100%;
-  }
-
-  .container > .content > .profile-banner
-  {
-    /*border: 2px solid #937341;*/
-    margin: 0 auto;
-    padding: 10px;
-    width: 204px;
-  }
-
-  .container > .content > .profile-banner > .profile-icon
-  {
-    background: linear-gradient(180deg, #ecc572 0, #815500);
-    border-radius: 50%;
-    height: 200px;
-    padding: 2px;
-    width: 200px;
-  }
-
-  .container > .content > .profile-banner > .profile-icon > img
-  {
-    border-radius: 50%;
-    height: 200px;
-    width: 200px;
-  }
-
-  .container > .content > .profile-banner > .profile-icon > .profile-name
-  {
-    background: linear-gradient(180deg, #ecc572 0, #815500);
-    border-radius: 6px;
-    margin-left: 30px;
-    margin-top: -5px;
-    padding: 2px;
-    position: absolute;
-    width: 135px;
-    z-index: 100000;
-  }
-
-  .container > .content > .profile-banner > .profile-icon > .profile-name > div
-  {
-    background: #111;
-    border-radius: 6px;
-    padding: 5px;
-    text-align: center;
-    width: 125px;
-  }
-
-  .container > .content > .profile-banner > .profile-icon > .profile-level
-  {
-    background: linear-gradient(180deg, #ecc572 0, #815500);
-    border-radius: 6px;
-    margin-left: 75px;
-    margin-top: -25px;
-    padding: 2px;
-    position: absolute;
-    width: 45px;
-    z-index: 100000;
-  }
-
-  .container > .content > .profile-banner > .profile-icon > .profile-level > div
-  {
-    background: #111;
-    border-radius: 6px;
-    padding: 5px;
-    text-align: center;
-    width: 35px;
-  }
-
-  .container > .content > .profile-nav
-  {
-    height: 31px;
-    margin: 20px auto 0px;
-    width: 600px;
-  }
-
-  .container > .content > .profile-nav > .profile-nav-item
-  {
-    float: left;
-    padding: 5px;
-    text-align: center;
-    width: 150px;
-  }
-
-  .container > .content > .profile-nav > .profile-nav-item:hover
-  {
-    cursor: pointer;
-    font-weight: bold;
-    text-shadow: 1px 1px 10px #d5b26e, 1px 1px 10px #d5b26e;
-    transition: text-shadow 0.3s ease;
-  }
-
-  .container > .content > .profile-nav > .profile-nav-item.active
-  {
-    color: #ecc572;
-    text-shadow: 1px 1px 10px #d5b26e, 1px 1px 10px #d5b26e;
-  }
-
-  .container > .content > .profile-container
-  {
-    background: linear-gradient(180deg, #ecc572 0, #815500);
-    border-radius: 6px;
-    padding: 2px;
-    margin: 0 auto;
-    width: 600px;
-  }
-
-  .container > .content > .profile-container > .profile-content
-  {
-    background: #111;
-    border-radius: 6px;
-    overflow: auto;
-    padding: 5px;
-  }
-
-  .container > .content > .profile-container > .profile-content > #match-history > .match
-  {
-    padding: 5px 0px;
-  }
-
-  .container > .content > .profile-container > .profile-content > #match-history > .match:not(:last-child)
-  {
-    border-bottom: 2px solid #7e633b;
-  }
-
-  .container > .content > .profile-container > .profile-content > #champion-mastery
-  {
-    padding-top: 20px;
-  }
-
-  .container > .content > .profile-container > .profile-content > #champion-mastery > .champion-content
-  {
-    float: left;
-    margin: 0px 0px 20px 26px;
-    padding: 10px 0px;
-    width: 120px;
-  }
-
-  .container > .content > .profile-container > .profile-content > #champion-mastery > .champion-content > .champion-icon,
-  .container > .content > .profile-container > .profile-content > #match-history > .match > .match-icons > .match-icon
-  {
-    background: linear-gradient(180deg, #ecc572 0, #815500);
-    border-radius: 50%;
-    height: 100px;
-    padding: 2px;
-    width: 100px;
-  }
-
-  .container > .content > .profile-container > .profile-content > #champion-mastery > .champion-content > .champion-icon > img,
-  .container > .content > .profile-container > .profile-content > #match-history > .match > .match-icons > .match-icon > img
-  {
-    border-radius: 50%;
-    height: 100px;
-    width: 100px;
-  }
-
-  .container > .content > .profile-container > .profile-content > #champion-mastery > .champion-content > .champion-icon > .champion-name
-  {
-    background: linear-gradient(180deg, #ecc572 0, #815500);
-    border-radius: 6px;
-    margin: -23px 0px 0px -8px;
-    padding: 2px;
-    position: absolute;
-    width: 110px;
-  }
-
-  .container > .content > .profile-container > .profile-content > #champion-mastery > .champion-content > .champion-icon > .champion-name > div
-  {
-    background: #111;
-    border-radius: 6px;
-    padding: 5px;
-    text-align: center;
-    width: 100px;
-  }
-
-  .container > .content > .profile-container > .profile-content > #champion-mastery > .champion-content > .champion-icon > .champion-level
-  {
-    background: linear-gradient(180deg, #ecc572 0, #815500);
-    border-radius: 6px;
-    margin: -12px 27px;
-    padding: 2px;
-    position: absolute;
-    width: 40px;
-  }
-
-  .container > .content > .profile-container > .profile-content > #champion-mastery > .champion-content > .champion-icon > .champion-level > div
-  {
-    background: #111;
-    border-radius: 6px;
-    padding: 5px;
-    text-align: center;
-    width: 30px;
-  }
+  text-align: center;
+  text-transform: uppercase;
+  width: 500px;
+  z-index: 1;
 }
 
-/**
- * Large Resolution Devices
- * Minimum width of 992px
- */
-@media ( min-width: 992px ) and ( max-width: 1199.98px )
+.container > .notice:before
 {
-  .container > .bg-init
-  {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -100;
-  }
-
-  .container > .bg-init:before
-  {
-    content: "";
-    background: url('../images/backgrounds/bg3.jpg') top;
-    background-size: cover;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: .25;
-    filter: blur(8px);
-  }
-  .container > .bg-init:after
-  {
-    content: "";
-    background: url('../images/backgrounds/bg3.jpg') top;
-    background-size: cover;
-    display: block;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-
-  .container > .notice
-  {
-    background: linear-gradient(180deg, #F51C1A 0, #9E0707);
-    border: none;
-    margin-top: -36px;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.11);
-    color: #F51C1A;
-
-    left: 50%;
-    transform: translateX(-50%);
-
-    line-height: 1;
-    padding: 10px 5px;
-    position: absolute;
-
-    text-align: center;
-    text-transform: uppercase;
-    width: 500px;
-    z-index: 1;
-  }
-
-  .container > .notice:before
-  {
-    top: 2px;
-    left: 2px;
-    right: 2px;
-    bottom: 2px;
-    content: "";
-    display: block;
-    position: absolute;
-    background: #111;
-    z-index: -1;
-  }
-
-  .container > .content
-  {
-    color: #d5b26e;
-  }
-
-  .container > .content > .main-form
-  {
-    left: 50%;
-    top: 50%; 
-    margin-left: -282px;
-    margin-top: -72px;
-    position: absolute;
-
-    height: 144px;
-    width: 564px;
-  }
-
-  .container > .content > .main-form > input
-  {
-    background: transparent;
-    border: 0 solid #7e633b;
-    border-bottom-width: 1px;
-    color: #c4b998;
-    font-size: 3rem;
-    font-weight: 400;
-    text-align: center;
-    width: 420px;
-  }
-
-  .container > .content > .main-form > select
-  {
-    background: transparent;
-    border: 0 solid #7e633b;
-    border-bottom-width: 1px;
-    color: #c4b998;
-    font-size: 3rem;
-    font-weight: 400;
-    outline: none;
-    width: 140px;
-  }
-
-  .container > .content > .main-form > select > option
-  {
-    background: #111;
-    border: 1px solid #7e633b;
-    outline: none;
-  }
-
-  .container > .content > .main-form > button
-  {
-    width: 100%;
-  }
-
-  .container > .content > .profile-banner
-  {
-    margin: 0 auto;
-    padding: 10px;
-    width: 204px;
-  }
-
-  .container > .content > .profile-banner > .profile-icon
-  {
-    background: linear-gradient(180deg, #ecc572 0, #815500);
-    border-radius: 50%;
-    height: 200px;
-    padding: 2px;
-    width: 200px;
-  }
-
-  .container > .content > .profile-banner > .profile-icon > img
-  {
-    border-radius: 50%;
-    height: 200px;
-    width: 200px;
-  }
-
-  .container > .content > .profile-banner > .profile-icon > .profile-name
-  {
-    background: linear-gradient(180deg, #ecc572 0, #815500);
-    border-radius: 6px;
-    margin-left: 30px;
-    margin-top: -5px;
-    padding: 2px;
-    position: absolute;
-    width: 135px;
-    z-index: 100000;
-  }
-
-  .container > .content > .profile-banner > .profile-icon > .profile-name > div
-  {
-    background: #111;
-    border-radius: 6px;
-    padding: 5px;
-    text-align: center;
-    width: 125px;
-  }
-
-  .container > .content > .profile-banner > .profile-icon > .profile-level
-  {
-    background: linear-gradient(180deg, #ecc572 0, #815500);
-    border-radius: 6px;
-    margin-left: 75px;
-    margin-top: -25px;
-    padding: 2px;
-    position: absolute;
-    width: 45px;
-    z-index: 100000;
-  }
-
-  .container > .content > .profile-banner > .profile-icon > .profile-level > div
-  {
-    background: #111;
-    border-radius: 6px;
-    padding: 5px;
-    text-align: center;
-    width: 35px;
-  }
-
-  .container > .content > .profile-container > .profile-content > .champion-mastery > .champion-icon
-  {
-    background: linear-gradient(180deg, #ecc572 0, #815500);
-    border-radius: 50%;
-    height: 50px;
-    padding: 2px;
-    width: 50px;
-  }
-
-  .container > .content > .profile-container > .profile-content > .champion-mastery > .champion-icon > img
-  {
-    border-radius: 50%;
-    height: 50px;
-    width: 50px;
-  }
-
-  .container > .content > .profile-container > .profile-content > .champion-mastery > .champion-icon > .champion-name
-  {
-    background: linear-gradient(180deg, #ecc572 0, #815500);
-    border-radius: 6px;
-    padding: 2px;
-    width: 100px;
-  }
-
-  .container > .content > .profile-container > .profile-content > .champion-mastery > .champion-icon > .champion-name > div
-  {
-    background: #111;
-    border-radius: 6px;
-    padding: 5px;
-    text-align: center;
-    width: 100px;
-  }
-
-  .container > .content > .profile-container > .profile-content > .champion-mastery > .champion-icon > .champion-level
-  {
-    background: linear-gradient(180deg, #ecc572 0, #815500);
-    border-radius: 6px;
-    padding: 2px;
-    width: 100px;
-  }
-
-  .container > .content > .profile-container > .profile-content > .champion-mastery > .champion-icon > .champion-level > div
-  {
-    background: #111;
-    border-radius: 6px;
-    padding: 5px;
-    text-align: center;
-    width: 100px;
-  }
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  content: "";
+  display: block;
+  position: absolute;
+  background: #111;
+  z-index: -1;
 }
 
-/**
- * Extra Large Resolution Devices
- * Minimum width of 1200px
- */
-@media ( min-width: 1200px )
+.container > .content
 {
-  .container > .bg-init
-  {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -100;
-  }
+  color: #d5b26e;
+}
 
-  .container > .bg-init:before
-  {
-    content: "";
-    background: url('../images/backgrounds/bg3.jpg') top;
-    background-size: cover;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: .25;
-    filter: blur(8px);
-  }
-  .container > .bg-init:after
-  {
-    content: "";
-    background: url('../images/backgrounds/bg3.jpg') top;
-    background-size: cover;
-    display: block;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
+.container > .content > .main-form
+{
+  left: 50%;
+  top: 50%; 
+  margin-left: -282px;
+  margin-top: -72px;
+  position: absolute;
 
-  .container > .notice
-  {
-    background: linear-gradient(180deg, #F51C1A 0, #9E0707);
-    border: none;
-    top: 10px;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.11);
-    color: #937341;
+  height: 144px;
+  width: 564px;
+}
 
-    left: 50%;
-    transform: translateX(-50%);
+.container > .content > .main-form > input
+{
+  background: transparent;
+  border: 0 solid #7e633b;
+  border-bottom-width: 1px;
+  color: #c4b998;
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+  width: 420px;
+}
 
-    line-height: 1;
-    padding: 10px 5px;
-    position: absolute;
+.container > .content > .main-form > select
+{
+  background: transparent;
+  border: 0 solid #7e633b;
+  border-bottom-width: 1px;
+  color: #c4b998;
+  font-size: 3rem;
+  font-weight: 400;
+  outline: none;
+  width: 140px;
+}
 
-    text-align: center;
-    text-transform: uppercase;
-    width: 500px;
-    z-index: 1;
-  }
+.container > .content > .main-form > select > option
+{
+  background: #111;
+  border: 1px solid #7e633b;
+  outline: none;
+}
 
-  .container > .notice:before
-  {
-    top: 2px;
-    left: 2px;
-    right: 2px;
-    bottom: 2px;
-    content: "";
-    display: block;
-    position: absolute;
-    background: #111;
-    z-index: -1;
-  }
+.container > .content > .main-form > button
+{
+  width: 100%;
+}
 
-  .container > .content
-  {
-    color: #d5b26e;
-  }
+.container > .content > .profile-banner
+{
+  /*border: 2px solid #937341;*/
+  margin: 0 auto;
+  padding: 10px;
+  width: 204px;
+}
 
-  .container > .content > .main-form
-  {
-    left: 50%;
-    top: 50%; 
-    margin-left: -282px;
-    margin-top: -72px;
-    position: absolute;
+.container > .content > .profile-banner > .profile-icon
+{
+  background: linear-gradient(180deg, #ecc572 0, #815500);
+  border-radius: 50%;
+  height: 200px;
+  padding: 2px;
+  width: 200px;
+}
 
-    height: 144px;
-    width: 564px;
-  }
+.container > .content > .profile-banner > .profile-icon > img
+{
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+}
 
-  .container > .content > .main-form > input
-  {
-    background: transparent;
-    border: 0 solid #7e633b;
-    border-bottom-width: 1px;
-    color: #c4b998;
-    font-size: 3rem;
-    font-weight: 400;
-    text-align: center;
-    width: 420px;
-  }
+.container > .content > .profile-banner > .profile-icon > .profile-name
+{
+  background: linear-gradient(180deg, #ecc572 0, #815500);
+  border-radius: 6px;
+  margin-left: 30px;
+  margin-top: -5px;
+  padding: 2px;
+  position: absolute;
+  width: 135px;
+  z-index: 100000;
+}
 
-  .container > .content > .main-form > select
-  {
-    background: transparent;
-    border: 0 solid #7e633b;
-    border-bottom-width: 1px;
-    color: #c4b998;
-    font-size: 3rem;
-    font-weight: 400;
-    outline: none;
-    width: 140px;
-  }
+.container > .content > .profile-banner > .profile-icon > .profile-name > div
+{
+  background: #111;
+  border-radius: 6px;
+  padding: 5px;
+  text-align: center;
+  width: 125px;
+}
 
-  .container > .content > .main-form > select > option
-  {
-    background: #111;
-    border: 1px solid #7e633b;
-    outline: none;
-  }
+.container > .content > .profile-banner > .profile-icon > .profile-level
+{
+  background: linear-gradient(180deg, #ecc572 0, #815500);
+  border-radius: 6px;
+  margin-left: 75px;
+  margin-top: -25px;
+  padding: 2px;
+  position: absolute;
+  width: 45px;
+  z-index: 100000;
+}
 
-  .container > .content > .main-form > button
-  {
-    width: 100%;
-  }
+.container > .content > .profile-banner > .profile-icon > .profile-level > div
+{
+  background: #111;
+  border-radius: 6px;
+  padding: 5px;
+  text-align: center;
+  width: 35px;
+}
 
-  .container > .content > .profile-banner
-  {
-    /*border: 2px solid #937341;*/
-    margin: 0 auto;
-    padding: 10px;
-    width: 204px;
-  }
+.container > .content > .profile-nav
+{
+  height: 31px;
+  margin: 20px auto 0px;
+  width: 600px;
+}
 
-  .container > .content > .profile-banner > .profile-icon
-  {
-    background: linear-gradient(180deg, #ecc572 0, #815500);
-    border-radius: 50%;
-    height: 200px;
-    padding: 2px;
-    width: 200px;
-  }
+.container > .content > .profile-nav > .profile-nav-item
+{
+  float: left;
+  padding: 5px;
+  text-align: center;
+  width: 150px;
+}
 
-  .container > .content > .profile-banner > .profile-icon > img
-  {
-    border-radius: 50%;
-    height: 200px;
-    width: 200px;
-  }
+.container > .content > .profile-nav > .profile-nav-item:hover
+{
+  cursor: pointer;
+  font-weight: bold;
+  text-shadow: 1px 1px 10px #d5b26e, 1px 1px 10px #d5b26e;
+  transition: text-shadow 0.3s ease;
+}
 
-  .container > .content > .profile-banner > .profile-icon > .profile-name
-  {
-    background: linear-gradient(180deg, #ecc572 0, #815500);
-    border-radius: 6px;
-    margin-left: 30px;
-    margin-top: -5px;
-    padding: 2px;
-    position: absolute;
-    width: 135px;
-    z-index: 100000;
-  }
+.container > .content > .profile-nav > .profile-nav-item.active
+{
+  color: #ecc572;
+  text-shadow: 1px 1px 10px #d5b26e, 1px 1px 10px #d5b26e;
+}
 
-  .container > .content > .profile-banner > .profile-icon > .profile-name > div
-  {
-    background: #111;
-    border-radius: 6px;
-    padding: 5px;
-    text-align: center;
-    width: 125px;
-  }
+.container > .content > .profile-container
+{
+  background: linear-gradient(180deg, #ecc572 0, #815500);
+  border-radius: 6px;
+  padding: 2px;
+  margin: 0 auto;
+  width: 600px;
+}
 
-  .container > .content > .profile-banner > .profile-icon > .profile-level
-  {
-    background: linear-gradient(180deg, #ecc572 0, #815500);
-    border-radius: 6px;
-    margin-left: 75px;
-    margin-top: -25px;
-    padding: 2px;
-    position: absolute;
-    width: 45px;
-    z-index: 100000;
-  }
+.container > .content > .profile-container > .profile-content
+{
+  background: #111;
+  border-radius: 6px;
+  overflow: auto;
+  padding: 5px;
+}
 
-  .container > .content > .profile-banner > .profile-icon > .profile-level > div
-  {
-    background: #111;
-    border-radius: 6px;
-    padding: 5px;
-    text-align: center;
-    width: 35px;
-  }
+.container > .content > .profile-container > .profile-content > #match-history > .match
+{
+  padding: 5px 0px;
+}
+
+.container > .content > .profile-container > .profile-content > #match-history > .match:not(:last-child)
+{
+  border-bottom: 2px solid #7e633b;
+}
+
+.container > .content > .profile-container > .profile-content > #champion-mastery
+{
+  padding-top: 20px;
+}
+
+.container > .content > .profile-container > .profile-content > #champion-mastery > .champion-content
+{
+  float: left;
+  margin: 0px 0px 20px 26px;
+  padding: 10px 0px;
+  width: 120px;
+}
+
+.container > .content > .profile-container > .profile-content > #champion-mastery > .champion-content > .champion-icon,
+.container > .content > .profile-container > .profile-content > #match-history > .match > .match-icons > .match-icon
+{
+  background: linear-gradient(180deg, #ecc572 0, #815500);
+  border-radius: 50%;
+  height: 100px;
+  padding: 2px;
+  width: 100px;
+}
+
+.container > .content > .profile-container > .profile-content > #champion-mastery > .champion-content > .champion-icon > img,
+.container > .content > .profile-container > .profile-content > #match-history > .match > .match-icons > .match-icon > img
+{
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+
+.container > .content > .profile-container > .profile-content > #champion-mastery > .champion-content > .champion-icon > .champion-name
+{
+  background: linear-gradient(180deg, #ecc572 0, #815500);
+  border-radius: 6px;
+  margin: -23px 0px 0px -8px;
+  padding: 2px;
+  position: absolute;
+  width: 110px;
+}
+
+.container > .content > .profile-container > .profile-content > #champion-mastery > .champion-content > .champion-icon > .champion-name > div
+{
+  background: #111;
+  border-radius: 6px;
+  padding: 5px;
+  text-align: center;
+  width: 100px;
+}
+
+.container > .content > .profile-container > .profile-content > #champion-mastery > .champion-content > .champion-icon > .champion-level
+{
+  background: linear-gradient(180deg, #ecc572 0, #815500);
+  border-radius: 6px;
+  margin: -12px 27px;
+  padding: 2px;
+  position: absolute;
+  width: 40px;
+}
+
+.container > .content > .profile-container > .profile-content > #champion-mastery > .champion-content > .champion-icon > .champion-level > div
+{
+  background: #111;
+  border-radius: 6px;
+  padding: 5px;
+  text-align: center;
+  width: 30px;
 }
 
 /**
  * Custom CSS Loader
  */
-.css-loader {
+.css-loader
+{
   display: none;
   left: 50%;
   top: 50%;
@@ -1280,7 +391,8 @@ button:hover
   height: 64px;
   width: 64px;
 }
-.css-loader div {
+.css-loader div
+{
   position: absolute;
   top: 27px;
   width: 11px;
@@ -1289,43 +401,56 @@ button:hover
   background: #937341;
   animation-timing-function: cubic-bezier(0, 1, 1, 0);
 }
-.css-loader div:nth-child(1) {
+.css-loader div:nth-child(1)
+{
   left: 6px;
   animation: css-loader1 0.6s infinite;
 }
-.css-loader div:nth-child(2) {
+.css-loader div:nth-child(2)
+{
   left: 6px;
   animation: css-loader2 0.6s infinite;
 }
-.css-loader div:nth-child(3) {
+.css-loader div:nth-child(3)
+{
   left: 26px;
   animation: css-loader2 0.6s infinite;
 }
-.css-loader div:nth-child(4) {
+.css-loader div:nth-child(4)
+{
   left: 45px;
   animation: css-loader3 0.6s infinite;
 }
-@keyframes css-loader1 {
-  0% {
+@keyframes css-loader1
+{
+  0%
+  {
     transform: scale(0);
   }
-  100% {
+  100%
+  {
     transform: scale(1);
   }
 }
-@keyframes css-loader3 {
-  0% {
+@keyframes css-loader3
+{
+  0%
+  {
     transform: scale(1);
   }
-  100% {
+  100%
+  {
     transform: scale(0);
   }
 }
-@keyframes css-loader2 {
-  0% {
+@keyframes css-loader2
+{
+  0%
+  {
     transform: translate(0, 0);
   }
-  100% {
+  100%
+  {
     transform: translate(19px, 0);
   }
 }
