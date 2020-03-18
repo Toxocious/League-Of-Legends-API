@@ -13,7 +13,7 @@ function FetchSummoner()
 		return false;
 	}
 
-	$('.main-form').fadeOut(500);
+	$('.form__group').fadeOut(500);
 	$('.css-loader').show(500).css('display', 'block');
 
 	$.ajax({

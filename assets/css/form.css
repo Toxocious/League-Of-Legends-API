@@ -1,0 +1,83 @@
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 500px;
+}
+
+.form__group button {
+  width: 100%;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 400px;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+.form__field::placeholder {
+  color: transparent;
+}
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  left: 110px;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #9b9b9b;
+}
+
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #ecc572, #815500);
+  border-image-slice: 1;
+}
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #ecc572;
+  font-weight: 700;
+}
+
+/* reset input */
+.form__field:required, .form__field:invalid {
+  box-shadow: none;
+}
+
+.container > .content > .form__group > select {
+  background: transparent;
+  border: 0 solid #7e633b;
+  border-bottom-width: 2px;
+  color: #c4b998;
+  float: right;
+  font-size: 2rem;
+  font-weight: 400;
+  outline: none;
+  width: 95px;
+}
+
+.container > .content > .form__group > select > option {
+  background: #111;
+  border: 1px solid #7e633b;
+  outline: none;
+}
+
+/*# sourceMappingURL=form.css.map */

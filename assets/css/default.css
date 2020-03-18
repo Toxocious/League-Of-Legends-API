@@ -16,6 +16,11 @@ body
 {
   height: 100%;
   margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 button
@@ -135,55 +140,12 @@ button:hover
 
 .container > .content
 {
+  align-items: center;
   color: #d5b26e;
-}
-
-.container > .content > .main-form
-{
-  left: 50%;
-  top: 50%; 
-  margin-left: -282px;
-  margin-top: -72px;
-  position: absolute;
-
-  height: 144px;
-  width: 564px;
-}
-
-.container > .content > .main-form > input
-{
-  background: transparent;
-  border: 0 solid #7e633b;
-  border-bottom-width: 1px;
-  color: #c4b998;
-  font-size: 3rem;
-  font-weight: 400;
-  text-align: center;
-  width: 420px;
-}
-
-.container > .content > .main-form > select
-{
-  background: transparent;
-  border: 0 solid #7e633b;
-  border-bottom-width: 1px;
-  color: #c4b998;
-  font-size: 3rem;
-  font-weight: 400;
-  outline: none;
-  width: 140px;
-}
-
-.container > .content > .main-form > select > option
-{
-  background: #111;
-  border: 1px solid #7e633b;
-  outline: none;
-}
-
-.container > .content > .main-form > button
-{
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .container > .content > .profile-banner
