@@ -14,7 +14,7 @@ Request a new API key if necessary, otherwise copy your existing API key.
 
 ### Setting Up The App Environment
 
-Within this app's file directories, navigate to the ``config`` folder.
+Within this app's file directories, create, and then navigate to, the ``config`` folder.
 Make a new file named ``environment.ini`` inside of the ``config`` folder.
 Once you've opened the ``environment.ini`` file, paste in the following snippet.
 
